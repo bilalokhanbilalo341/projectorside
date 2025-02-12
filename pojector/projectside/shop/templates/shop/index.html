@@ -1,3 +1,125 @@
+{% extends 'shop/basic.html' %}
+
+{% block css %}
+  .col-3 {
+    display: inline-block;
+    margin-left: -4px;
+  }
+
+  .carousel-indicators .active {
+    background-color: blue;
+  }
+
+  .col-3 img {
+    width: 100%;
+    height: auto;
+  }
+
+  body .carousel-indicators li {
+    background-color: blue;
+  }
+
+  body .carousel-indicators {
+    bottom: 0;
+  }
+
+  body .carousel-control-prev-icon,
+  body .carousel-control-next-icon {
+    background-color: blue;
+  }
+
+  body .no-padding {
+    padding-left: 0;
+    padding-right: 0;
+  }
+{% endblock %}
+
+{% block body %}
+{% load static %}
+<div class="container">
+  <div id="demo" class="carousel slide my-3" data-bs-ride="carousel">
+    <ul class="carousel-indicators">
+      <li data-bs-target="#demo" data-bs-slide-to="0" class="active"></li>
+      <li data-bs-target="#demo" data-bs-slide-to="1"></li>
+      <li data-bs-target="#demo" data-bs-slide-to="2"></li>
+    </ul>
+
+    <div class="carousel-inner no-padding">
+      <div class="carousel-item active">
+        <div class="col-3 col-sm-3 col-md-3">
+          <div class="card" style="width: 18rem;">
+            <img src='{% static "shop/test.jpg" %}' class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="col-3 col-sm-3 col-md-3">
+          <div class="card" style="width: 18rem;">
+            <img src='{% static "shop/test.jpg" %}' class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title 2</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content for the second carousel item.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="col-3 col-sm-3 col-md-3">
+          <div class="card" style="width: 18rem;">
+            <img src='{% static "shop/test.jpg" %}' class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title 3</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content for the third carousel item.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a class="carousel-control-prev" href="#demo" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </a>
+  </div>
+</div>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!--
 <!doctype html>
 <html lang="en">
@@ -244,101 +366,3 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
   </body>
 </html>-->
-
-  
-{% extends 'shop/basic.html' %}
-
-{% block css %}
-  .col-3 {
-    display: inline-block;
-    margin-left: -4px;
-  }
-
-  .carousel-indicators .active {
-    background-color: blue;
-  }
-
-  .col-3 img {
-    width: 100%;
-    height: auto;
-  }
-
-  body .carousel-indicators li {
-    background-color: blue;
-  }
-
-  body .carousel-indicators {
-    bottom: 0;
-  }
-
-  body .carousel-control-prev-icon,
-  body .carousel-control-next-icon {
-    background-color: blue;
-  }
-
-  body .no-padding {
-    padding-left: 0;
-    padding-right: 0;
-  }
-{% endblock %}
-
-{% block body %}
-{% load static %}
-<div class="container">
-  <div id="demo" class="carousel slide my-3" data-bs-ride="carousel">
-    <ul class="carousel-indicators">
-      <li data-bs-target="#demo" data-bs-slide-to="0" class="active"></li>
-      <li data-bs-target="#demo" data-bs-slide-to="1"></li>
-      <li data-bs-target="#demo" data-bs-slide-to="2"></li>
-    </ul>
-
-    <div class="carousel-inner no-padding">
-      <div class="carousel-item active">
-        <div class="col-3 col-sm-3 col-md-3">
-          <div class="card" style="width: 18rem;">
-            <img src='{% static "shop/test.jpg" %}' class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="carousel-item">
-        <div class="col-3 col-sm-3 col-md-3">
-          <div class="card" style="width: 18rem;">
-            <img src='{% static "shop/test.jpg" %}' class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title 2</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content for the second carousel item.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="carousel-item">
-        <div class="col-3 col-sm-3 col-md-3">
-          <div class="card" style="width: 18rem;">
-            <img src='{% static "shop/test.jpg" %}' class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title 3</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content for the third carousel item.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <a class="carousel-control-prev" href="#demo" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-    </a>
-    <a class="carousel-control-next" href="#demo" data-bs-slide="next">
-        <span class="carousel-control-next-icon"></span>
-    </a>
-  </div>
-</div>
-{% endblock %}
